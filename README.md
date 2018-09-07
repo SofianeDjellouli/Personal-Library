@@ -20,4 +20,4 @@ https://personal-library-.glitch.me/
 9) I can send a delete request to /api/books to delete all books in the database. Returned will be 'complete delete successful' if successful.
 10) All 6 functional tests required are complete and passing.
 
-<strong>Disclaimer: JQuery code and tests not yet completed</strong>
+<strong>JQuery code and tests not yet completed</strong>
