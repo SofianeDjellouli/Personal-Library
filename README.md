@@ -1,4 +1,4 @@
-# API Personal Library
+# Personal Library API
 ## Stack
 * Node.js
 * Express.js
