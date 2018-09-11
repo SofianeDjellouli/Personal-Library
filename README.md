@@ -20,4 +20,8 @@ https://personal-library-.glitch.me/
 9) I can send a delete request to /api/books to delete all books in the database. Returned will be 'complete delete successful' if successful.
 10) All 6 functional tests required are complete and passing.
 
+## My code with comments
+This project being part of the FreeCodeCamp curriculum, the front end was already built. I only had to code the following files:
+https://github.com/SofianeDjellouli/Personnal-Library-API/blob/master/server.js
+https://github.com/SofianeDjellouli/Personnal-Library-API/blob/master/routes/api.js
 <strong>JQuery code and tests not yet finished.</strong>
