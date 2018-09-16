@@ -21,8 +21,7 @@ https://personal-library-.glitch.me/
 10) All 6 functional tests required are complete and passing.
 
 ## My code with comments
-This project being part of the FreeCodeCamp curriculum, the front end was already built. I only had to code the following files:
 <br>https://github.com/SofianeDjellouli/Personnal-Library-API/blob/master/server.js
 <br>https://github.com/SofianeDjellouli/Personnal-Library-API/blob/master/routes/api.js
-<br>
-<strong>JQuery code and tests not yet finished.</strong>
+This project being part of the FreeCodeCamp curriculum, the front end was already built. I rebuilt it with React and Bootstrap:
+
