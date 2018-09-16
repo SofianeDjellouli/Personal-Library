@@ -18,10 +18,13 @@ https://personal-library-.glitch.me/
 7) I can delete /api/books/{_id} to delete a book from the collection. Returned will be 'delete successful' if successful.
 8) If I try to request a book that doesn't exist I will get a 'no book exists' message.
 9) I can send a delete request to /api/books to delete all books in the database. Returned will be 'complete delete successful' if successful.
-10) All 6 functional tests required are complete and passing.
+10) If a book has one comment `1 comment` is displayed.
+11) If he has more, the number of comments followed by `comments` is displayed.
+12) Clicking on the number of comments displays them.
+13) I can add books, delete books and add comment from the front-end.
 
 ## My code with comments
-<br>https://github.com/SofianeDjellouli/Personnal-Library-API/blob/master/server.js
-<br>https://github.com/SofianeDjellouli/Personnal-Library-API/blob/master/routes/api.js
-This project being part of the FreeCodeCamp curriculum, the front end was already built. I rebuilt it with React and Bootstrap:
+https://github.com/SofianeDjellouli/Personnal-Library-API/blob/master/server.js  
+https://github.com/SofianeDjellouli/Personnal-Library-API/blob/master/routes/api.js  
+https://github.com/SofianeDjellouli/Personnal-Library/blob/master/public/react-component.js
 
