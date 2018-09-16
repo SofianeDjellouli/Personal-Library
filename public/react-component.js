@@ -136,4 +136,4 @@ class PersonalLibrary extends React.Component {
 }
 
 
-ReactDOM.render(<JSCalculator/>,document.getElementById('app'))
+ReactDOM.render(<PersonalLibrary/>,document.getElementById('app'))
