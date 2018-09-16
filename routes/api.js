@@ -1,3 +1,11 @@
+/*
+*
+*
+*       Complete the API routing below
+*       
+*       
+*/
+
 'use strict';
 
 var expect = require('chai').expect;
@@ -24,7 +32,7 @@ module.exports = function (app) {
         })
     })
 // we create books in the db with an array of comment 
-//     but we remove it from the response
+//     but we remove if from the response
       .post(function (req, res){
         var title = req.body.title;
         db.collection('books').insertOne({title:title,comments:[]},(err,doc)=>{
