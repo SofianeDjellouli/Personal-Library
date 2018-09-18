@@ -3,8 +3,6 @@
 * Node.js
 * Express.js
 * MongoDB
-* JQuery
-* Chai
 * Helmet
 ## Live
 https://personal-library-.glitch.me/
