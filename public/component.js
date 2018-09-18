@@ -3,7 +3,6 @@ var _createClass = function () {function defineProperties(target, props) {for (v
     state = {
       input: '',
       booklist: [],
-      loading: true,
       showComments: {} }, _this.
 
 
@@ -15,25 +14,29 @@ var _createClass = function () {function defineProperties(target, props) {for (v
     submitBook = function (event) {
       event.preventDefault();
       event.target.reset();
-      var title = _this.state.input;
-      axios.post('https://personal-library-.glitch.me/api/books', { title: title }).
-      then(function (res) {
-        _this.setState({ booklist: [res.data].concat(_toConsumableArray(_this.state.booklist)) });
-      }).
-      catch(function (err) {return console.log(err);});
+      if (_this.state.input !== '') {
+        var title = _this.state.input;
+        axios.post('https://personal-library-.glitch.me/api/books', { title: title }).
+        then(function (res) {
+          _this.setState({ booklist: [res.data].concat(_toConsumableArray(_this.state.booklist)), input: '' });
+        }).
+        catch(function (err) {return console.log(err);});
+      }
     }, _this.
 
     submitComment = function (event, id, i) {
       event.preventDefault();
       event.target.reset();
-      var comment = _this.state.input;
-      axios.post('https://personal-library-.glitch.me/api/books/' + id, { comment: comment }).
-      then(function (res) {
-        var change = _this.state.booklist;
-        change.splice(i, 1, res.data);
-        _this.setState({ booklist: change });
-      }).
-      catch(function (err) {return console.log(err);});
+      if (_this.state.input !== '') {
+        var comment = _this.state.input;
+        axios.post('https://personal-library-.glitch.me/api/books/' + id, { comment: comment }).
+        then(function (res) {
+          var change = _this.state.booklist;
+          change.splice(i, 1, res.data);
+          _this.setState({ booklist: change, input: '' });
+        }).
+        catch(function (err) {return console.log(err);});
+      }
     }, _this.
 
     deleteItem = function (item) {
@@ -44,7 +47,6 @@ var _createClass = function () {function defineProperties(target, props) {for (v
         _this.setState({ booklist: [] });
       }).
       catch(function (err) {return console.log(err);});
-      _this.state.booklist.length === 0 ? _this.setState({ loading: false }) : null;
     }, _temp), _possibleConstructorReturn(_this, _ret);}_createClass(PersonalLibrary, [{ key: 'showComments', value: function showComments(
 
     i) {
@@ -55,14 +57,15 @@ var _createClass = function () {function defineProperties(target, props) {for (v
 
     {var _this2 = this;
       axios.get('https://personal-library-.glitch.me/api/books').
+      then(this.setState({ loading: true })).
       then(function (res) {
-        _this2.setState({ booklist: res.data.reverse() });
+        _this2.setState({ booklist: res.data.reverse(), loading: false });
         _this2.state.booklist.map(function (e, i) {
           axios.get('https://personal-library-.glitch.me/api/books/' + e._id).
           then(function (res) {
             var change = _this2.state.booklist;
             change.splice(i, 1, res.data[0]);
-            _this2.setState({ booklist: change, loading: false });
+            _this2.setState({ booklist: change });
           }).
           catch(function (err) {return console.log(err);});
         });
@@ -82,7 +85,7 @@ var _createClass = function () {function defineProperties(target, props) {for (v
                 React.createElement('h5', null, 'Add a book:     ')),
 
               React.createElement('input', { id: 'addbook', type: 'text', name: 'title', onChange: this.handleChange, className: 'form-control mx-3', placeholder: 'Some title...' }),
-              React.createElement('button', { type: 'submit', className: 'btn btn-primary' }, 'Sumbit')),
+              React.createElement('button', { type: 'submit', className: 'btn btn-primary' }, 'Submit')),
 
             React.createElement('div', null,
               React.createElement('div', { className: 'd-flex flex-wrap justify-content-center' },
