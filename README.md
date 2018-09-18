@@ -5,7 +5,8 @@
 * MongoDB
 * Helmet
 ## Live
-https://personal-library-.glitch.me/
+* <a href="https://personal-library-.glitch.me/">Web app version</a>
+* <a href="https://snack.expo.io/@sofianed/personal-library">Mobile app version</a>
 ## User stories
 1) Nothing from my website will be cached in my client as a security measure.
 2) I will see that the site is powered by 'PHP 4.2.0' even though it isn't as a security measure.
