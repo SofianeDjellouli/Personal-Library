@@ -4,6 +4,8 @@
 * Express.js
 * MongoDB
 * Helmet
+* React
+* React Native
 ## Live
 * <a href="https://personal-library-.glitch.me/">Web app version</a>
 * <a href="https://snack.expo.io/@sofianed/personal-library">Mobile app version</a>
@@ -25,5 +27,5 @@
 ## My code with comments
 https://github.com/SofianeDjellouli/Personnal-Library-API/blob/master/server.js  
 https://github.com/SofianeDjellouli/Personnal-Library-API/blob/master/routes/api.js  
-https://github.com/SofianeDjellouli/Personnal-Library/blob/master/public/react-component.js
-
+https://github.com/SofianeDjellouli/Personnal-Library/blob/master/public/react-component.js  
+https://snack.expo.io/@sofianed/personal-library
